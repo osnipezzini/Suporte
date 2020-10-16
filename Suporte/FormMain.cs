@@ -12,10 +12,7 @@ namespace Suporte
         }
         void RunProcess(int port)
         {
-            Process p = new Process();
-            p.StartInfo.FileName = "vncviewer.exe";
-            p.StartInfo.Arguments = $"-listen {port}";
-            p.Start();
+            Process.Start("vncviewer.exe", $"-listen {port}");
             Application.Exit();
         }
 
